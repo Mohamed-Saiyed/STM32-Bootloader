@@ -1,0 +1,441 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.30.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: mohamed sayed, bta3ti, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.30.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.14
+Assembler:       Armasm.exe V6.14
+Linker/Locator:  ArmLink.exe V6.14
+Library Manager: ArmAr.exe V6.14
+Hex Converter:   FromElf.exe V6.14
+CPU DLL:         SARMCM3.DLL V5.30.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
+Dialog DLL:      TCM.DLL V1.42.0.0
+ 
+<h2>Project:</h2>
+C:\Users\Mohamed-Sayed\Documents\KeilWorkspace\bootloader\bootloader.uvprojx
+Project File Date:  07/09/2020
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.14', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+main.c(1): warning: In file included from...
+./main.h(4): warning: In file included from...
+./hal_uart_driver.h(192): warning: no newline at end of file [-Wnewline-eof]
+#endif /*UART_DRIVER_H_*/
+                         ^
+main.c(1): warning: In file included from...
+./main.h(6): warning: In file included from...
+./led.h(14): warning: no newline at end of file [-Wnewline-eof]
+void board_led_init(void);
+                          ^
+main.c(6): warning: no previous extern declaration for non-static variable 'FLASH1' [-Wmissing-variable-declarations]
+FLASH_TypeDef *FLASH1 = FLASH;
+               ^
+main.c(6): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+FLASH_TypeDef *FLASH1 = FLASH;
+^
+main.c(7): warning: no previous extern declaration for non-static variable 'flah_status' [-Wmissing-variable-declarations]
+uint32_t flah_status = 0;
+         ^
+main.c(7): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint32_t flah_status = 0;
+^
+main.c(9): warning: no previous extern declaration for non-static variable 'supported_command' [-Wmissing-variable-declarations]
+uint8_t supported_command[] ={BL_GET_VER , BL_GET_CID , BL_GET_RDP_STATUS , BL_FLASH_ERASE,
+        ^
+main.c(9): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t supported_command[] ={BL_GET_VER , BL_GET_CID , BL_GET_RDP_STATUS , BL_FLASH_ERASE,
+^
+main.c(27): warning: passing 'char [52]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+                HAL_USART_Send_String(DEBUG_UART , "BL_DEBUG_MSG:Button is pressed...going to BL mode\r\n");
+                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hal_uart_driver.h(173): note: passing argument to parameter 'string' here
+void HAL_USART_Send_String(USART_TypeDef *USARTx , uint8_t *string);
+                                                            ^
+main.c(32): warning: passing 'char [54]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+                HAL_USART_Send_String(DEBUG_UART , "BL_DEBUG_MSG:Button is pressed...executing user app\r\n");
+                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hal_uart_driver.h(173): note: passing argument to parameter 'string' here
+void HAL_USART_Send_String(USART_TypeDef *USARTx , uint8_t *string);
+                                                            ^
+main.c(42): warning: implicitly declaring library function 'memset' with type 'void *(void *, int, unsigned int)' [-Wimplicit-function-declaration]
+  memset(&uart , 0 , sizeof(uart));
+  ^
+main.c(42): note: include the header <string.h> or explicitly provide a declaration for 'memset'
+main.c(1): warning: In file included from...
+./main.h(4): warning: In file included from...
+./hal_uart_driver.h(149): warning: padding struct 'USART_config' with 3 bytes to align 'OverSampling' [-Wpadded]
+        uint32_t OverSampling;
+                 ^
+main.c(59): warning: passing 'char [43]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+         HAL_USART_Send_String(BL_UART , "BL_DEBUG_MSG:bootloader_jump_to_user_app\r\n");
+                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hal_uart_driver.h(173): note: passing argument to parameter 'string' here
+void HAL_USART_Send_String(USART_TypeDef *USARTx , uint8_t *string);
+                                                            ^
+main.c(65): warning: assigning to 'void (*)(void)' from 'void *' converts between void pointer and function pointer [-Wpedantic]
+         app_rest_handler = (void*) reset_handler;
+                          ^ ~~~~~~~~~~~~~~~~~~~~~
+main.c(124): warning: passing 'char [54]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+                                HAL_USART_Send_String(DEBUG_UART , "BL_DEBUG_MSG:INVALID Command code recived from HOST\r\n");
+                                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hal_uart_driver.h(173): note: passing argument to parameter 'string' here
+void HAL_USART_Send_String(USART_TypeDef *USARTx , uint8_t *string);
+                                                            ^
+main.c(81): warning: comparison of integers of different signs: 'int' and 'uint32_t' (aka 'unsigned int') [-Wsign-compare]
+                        for(int i = 1 ; i <= rcv_len ; i++)
+                                        ~ ^  ~~~~~~~
+main.c(72): warning: function 'bootloader_uart_read_data' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+main.c(140): warning: passing 'char [44]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        HAL_USART_Send_String(DEBUG_UART , "BL_DEBUG_MSG:bootloader_handle_getver_cmd\r\n");
+                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hal_uart_driver.h(173): note: passing argument to parameter 'string' here
+void HAL_USART_Send_String(USART_TypeDef *USARTx , uint8_t *string);
+                                                            ^
+main.c(144): warning: cast from 'uint8_t *' (aka 'unsigned char *') to 'uint32_t *' (aka 'unsigned int *') increases required alignment from 1 to 4 [-Wcast-align]
+        uint32_t host_crc = *((uint32_t*)(pBuffer + command_packet_len - 4));
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.c(149): warning: passing 'char [32]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+                HAL_USART_Send_String(DEBUG_UART , "BL_DEBUG_MSG:checksum Success\r\n");
+                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hal_uart_driver.h(173): note: passing argument to parameter 'string' here
+void HAL_USART_Send_String(USART_TypeDef *USARTx , uint8_t *string);
+                                                            ^
+main.c(152): warning: passing 'char [34]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+                HAL_USART_Send_String(DEBUG_UART , "BL_DEBUG_MSG:Sending bootloader\r\n");
+                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hal_uart_driver.h(173): note: passing argument to parameter 'string' here
+void HAL_USART_Send_String(USART_TypeDef *USARTx , uint8_t *string);
+                                                            ^
+main.c(157): warning: passing 'char [30]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+          HAL_USART_Send_String(DEBUG_UART , "BL_DEBUG_MSG:checksum Fail!\r\n");
+                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hal_uart_driver.h(173): note: passing argument to parameter 'string' here
+void HAL_USART_Send_String(USART_TypeDef *USARTx , uint8_t *string);
+                                                            ^
+main.c(166): warning: passing 'char [45]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        HAL_USART_Send_String(DEBUG_UART , "BL_DEBUG_MSG:bootloader_handle_gethelp_cmd\r\n");
+                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hal_uart_driver.h(173): note: passing argument to parameter 'string' here
+void HAL_USART_Send_String(USART_TypeDef *USARTx , uint8_t *string);
+                                                            ^
+main.c(170): warning: cast from 'uint8_t *' (aka 'unsigned char *') to 'uint32_t *' (aka 'unsigned int *') increases required alignment from 1 to 4 [-Wcast-align]
+        uint32_t host_crc = *((uint32_t*)(pBuffer + command_packet_len - 4));
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.c(175): warning: passing 'char [32]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+                HAL_USART_Send_String(DEBUG_UART , "BL_DEBUG_MSG:checksum Success\r\n");
+                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hal_uart_driver.h(173): note: passing argument to parameter 'string' here
+void HAL_USART_Send_String(USART_TypeDef *USARTx , uint8_t *string);
+                                                            ^
+main.c(181): warning: passing 'char [30]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+          HAL_USART_Send_String(DEBUG_UART , "BL_DEBUG_MSG:checksum Fail!\r\n");
+                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hal_uart_driver.h(173): note: passing argument to parameter 'string' here
+void HAL_USART_Send_String(USART_TypeDef *USARTx , uint8_t *string);
+                                                            ^
+main.c(191): warning: passing 'char [45]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        HAL_USART_Send_String(DEBUG_UART , "BL_DEBUG_MSG:bootloader_handle_gethelp_cmd\r\n");
+                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hal_uart_driver.h(173): note: passing argument to parameter 'string' here
+void HAL_USART_Send_String(USART_TypeDef *USARTx , uint8_t *string);
+                                                            ^
+main.c(195): warning: cast from 'uint8_t *' (aka 'unsigned char *') to 'uint32_t *' (aka 'unsigned int *') increases required alignment from 1 to 4 [-Wcast-align]
+        uint32_t host_crc = *((uint32_t*)(pBuffer + command_packet_len - 4));
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.c(200): warning: passing 'char [32]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+                HAL_USART_Send_String(DEBUG_UART , "BL_DEBUG_MSG:checksum Success\r\n");
+                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hal_uart_driver.h(173): note: passing argument to parameter 'string' here
+void HAL_USART_Send_String(USART_TypeDef *USARTx , uint8_t *string);
+                                                            ^
+main.c(207): warning: passing 'char [30]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+          HAL_USART_Send_String(DEBUG_UART , "BL_DEBUG_MSG:checksum Fail!\r\n");
+                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hal_uart_driver.h(173): note: passing argument to parameter 'string' here
+void HAL_USART_Send_String(USART_TypeDef *USARTx , uint8_t *string);
+                                                            ^
+main.c(217): warning: passing 'char [44]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        HAL_USART_Send_String(DEBUG_UART , "BL_DEBUG_MSG:bootloader_handle_getrdp_cmd\r\n");
+                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hal_uart_driver.h(173): note: passing argument to parameter 'string' here
+void HAL_USART_Send_String(USART_TypeDef *USARTx , uint8_t *string);
+                                                            ^
+main.c(221): warning: cast from 'uint8_t *' (aka 'unsigned char *') to 'uint32_t *' (aka 'unsigned int *') increases required alignment from 1 to 4 [-Wcast-align]
+        uint32_t host_crc = *((uint32_t*)(pBuffer + command_packet_len - 4));
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.c(226): warning: passing 'char [32]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+          HAL_USART_Send_String(DEBUG_UART , "BL_DEBUG_MSG:checksum Success\r\n");
+                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hal_uart_driver.h(173): note: passing argument to parameter 'string' here
+void HAL_USART_Send_String(USART_TypeDef *USARTx , uint8_t *string);
+                                                            ^
+main.c(233): warning: passing 'char [30]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+          HAL_USART_Send_String(DEBUG_UART , "BL_DEBUG_MSG:checksum Fail!\r\n");
+                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hal_uart_driver.h(173): note: passing argument to parameter 'string' here
+void HAL_USART_Send_String(USART_TypeDef *USARTx , uint8_t *string);
+                                                            ^
+main.c(245): warning: passing 'char [44]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        HAL_USART_Send_String(DEBUG_UART , "BL_DEBUG_MSG:bootloader_handle_getrdp_cmd\r\n");
+                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hal_uart_driver.h(173): note: passing argument to parameter 'string' here
+void HAL_USART_Send_String(USART_TypeDef *USARTx , uint8_t *string);
+                                                            ^
+main.c(249): warning: cast from 'uint8_t *' (aka 'unsigned char *') to 'uint32_t *' (aka 'unsigned int *') increases required alignment from 1 to 4 [-Wcast-align]
+        uint32_t host_crc = *((uint32_t*)(pBuffer + command_packet_len - 4));
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.c(255): warning: passing 'char [32]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+                        HAL_USART_Send_String(DEBUG_UART , "BL_DEBUG_MSG:checksum Success\r\n");
+                                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hal_uart_driver.h(173): note: passing argument to parameter 'string' here
+void HAL_USART_Send_String(USART_TypeDef *USARTx , uint8_t *string);
+                                                            ^
+main.c(259): warning: cast from 'uint8_t *' (aka 'unsigned char *') to 'uint32_t *' (aka 'unsigned int *') increases required alignment from 1 to 4 [-Wcast-align]
+                        Address = *((uint32_t*)(&pBuffer[2]));
+                                    ^~~~~~~~~~~~~~~~~~~~~~~~
+main.c(267): warning: initializing 'void (*)(void)' with an expression of type 'void *' converts between void pointer and function pointer [-Wpedantic]
+                                void(*go_to_addr)(void) = (void*)Address;
+                                      ^                   ~~~~~~~~~~~~~~
+main.c(274): warning: passing 'char [28]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+                          HAL_USART_Send_String(DEBUG_UART , "BL_DEBUG_MSG:addr_invalid\r\n");
+                                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hal_uart_driver.h(173): note: passing argument to parameter 'string' here
+void HAL_USART_Send_String(USART_TypeDef *USARTx , uint8_t *string);
+                                                            ^
+main.c(282): warning: passing 'char [30]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+          HAL_USART_Send_String(DEBUG_UART , "BL_DEBUG_MSG:checksum Fail!\r\n");
+                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hal_uart_driver.h(173): note: passing argument to parameter 'string' here
+void HAL_USART_Send_String(USART_TypeDef *USARTx , uint8_t *string);
+                                                            ^
+main.c(291): warning: passing 'char [47]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        HAL_USART_Send_String(DEBUG_UART , "BL_DEBUG_MSG:bootloader_handle_mem_write_cmd\r\n");
+                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hal_uart_driver.h(173): note: passing argument to parameter 'string' here
+void HAL_USART_Send_String(USART_TypeDef *USARTx , uint8_t *string);
+                                                            ^
+main.c(295): warning: cast from 'uint8_t *' (aka 'unsigned char *') to 'uint32_t *' (aka 'unsigned int *') increases required alignment from 1 to 4 [-Wcast-align]
+        uint32_t host_crc = *((uint32_t*)(pBuffer + command_packet_len - 4));
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.c(301): warning: passing 'char [32]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+                        HAL_USART_Send_String(DEBUG_UART , "BL_DEBUG_MSG:checksum Success\r\n");
+                                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hal_uart_driver.h(173): note: passing argument to parameter 'string' here
+void HAL_USART_Send_String(USART_TypeDef *USARTx , uint8_t *string);
+                                                            ^
+main.c(311): warning: passing 'char [30]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+          HAL_USART_Send_String(DEBUG_UART , "BL_DEBUG_MSG:checksum Fail!\r\n");
+                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hal_uart_driver.h(173): note: passing argument to parameter 'string' here
+void HAL_USART_Send_String(USART_TypeDef *USARTx , uint8_t *string);
+                                                            ^
+main.c(326): warning: incompatible pointer to integer conversion initializing 'uint32_t' (aka 'unsigned int') with an expression of type 'uint32_t *' (aka 'unsigned int *'); dereference with * [-Wint-conversion]
+        uint32_t mem_address = ((uint32_t*)0x08008000);
+                 ^             ~~~~~~~~~~~~~~~~~~~~~~~
+                               *
+main.c(328): warning: passing 'char [47]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        HAL_USART_Send_String(DEBUG_UART , "BL_DEBUG_MSG:bootloader_handle_mem_write_cmd\r\n");
+                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hal_uart_driver.h(173): note: passing argument to parameter 'string' here
+void HAL_USART_Send_String(USART_TypeDef *USARTx , uint8_t *string);
+                                                            ^
+main.c(332): warning: cast from 'uint8_t *' (aka 'unsigned char *') to 'uint32_t *' (aka 'unsigned int *') increases required alignment from 1 to 4 [-Wcast-align]
+        uint32_t host_crc = *((uint32_t*)(pBuffer + command_packet_len - 4));
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.c(336): warning: passing 'char [32]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+            HAL_USART_Send_String(DEBUG_UART , "BL_DEBUG_MSG:checksum Success\r\n");
+                                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hal_uart_driver.h(173): note: passing argument to parameter 'string' here
+void HAL_USART_Send_String(USART_TypeDef *USARTx , uint8_t *string);
+                                                            ^
+main.c(340): warning: incompatible pointer to integer conversion assigning to 'uint32_t' (aka 'unsigned int') from 'uint32_t *' (aka 'unsigned int *'); dereference with * [-Wint-conversion]
+                        Address = ((uint32_t*)0x08008000);
+                                ^ ~~~~~~~~~~~~~~~~~~~~~~~
+                                  *(                     )
+main.c(350): warning: incompatible pointer types passing 'uint8_t (*)[2712]' to parameter of type 'uint8_t *' (aka 'unsigned char *') [-Wincompatible-pointer-types]
+                          Status =      mem_write(&bin_buffer , mem_address , 2712);
+                                                  ^~~~~~~~~~~
+./main.h(105): note: passing argument to parameter 'pBuffer' here
+HAL_FlashStatusTypeDef mem_write(uint8_t *pBuffer , uint32_t mem_addr , uint32_t len);
+                                          ^
+main.c(357): warning: passing 'char [28]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+                          HAL_USART_Send_String(DEBUG_UART , "BL_DEBUG_MSG:addr_invalid\r\n");
+                                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hal_uart_driver.h(173): note: passing argument to parameter 'string' here
+void HAL_USART_Send_String(USART_TypeDef *USARTx , uint8_t *string);
+                                                            ^
+main.c(332): warning: unused variable 'host_crc' [-Wunused-variable]
+        uint32_t host_crc = *((uint32_t*)(pBuffer + command_packet_len - 4));
+                 ^
+main.c(325): warning: unused variable 'pay_load' [-Wunused-variable]
+        uint8_t pay_load = pBuffer[6];
+                ^
+main.c(366): warning: unused parameter 'pBuffer' [-Wunused-parameter]
+void bootloader_handle_mem_read_cmd(uint8_t *pBuffer)
+                                             ^
+main.c(375): warning: passing 'char [47]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        HAL_USART_Send_String(DEBUG_UART , "BL_DEBUG_MSG:bootloader_handle_mem_write_cmd\r\n");
+                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hal_uart_driver.h(173): note: passing argument to parameter 'string' here
+void HAL_USART_Send_String(USART_TypeDef *USARTx , uint8_t *string);
+                                                            ^
+main.c(379): warning: cast from 'uint8_t *' (aka 'unsigned char *') to 'uint32_t *' (aka 'unsigned int *') increases required alignment from 1 to 4 [-Wcast-align]
+        uint32_t host_crc = *((uint32_t*)(pBuffer + command_packet_len - 4));
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.c(385): warning: passing 'char [32]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+                        HAL_USART_Send_String(DEBUG_UART , "BL_DEBUG_MSG:checksum Success\r\n");
+                                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hal_uart_driver.h(173): note: passing argument to parameter 'string' here
+void HAL_USART_Send_String(USART_TypeDef *USARTx , uint8_t *string);
+                                                            ^
+main.c(395): warning: passing 'char [30]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+          HAL_USART_Send_String(DEBUG_UART , "BL_DEBUG_MSG:checksum Fail!\r\n");
+                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hal_uart_driver.h(173): note: passing argument to parameter 'string' here
+void HAL_USART_Send_String(USART_TypeDef *USARTx , uint8_t *string);
+                                                            ^
+main.c(405): warning: passing 'char [47]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        HAL_USART_Send_String(DEBUG_UART , "BL_DEBUG_MSG:bootloader_handle_mem_write_cmd\r\n");
+                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hal_uart_driver.h(173): note: passing argument to parameter 'string' here
+void HAL_USART_Send_String(USART_TypeDef *USARTx , uint8_t *string);
+                                                            ^
+main.c(409): warning: cast from 'uint8_t *' (aka 'unsigned char *') to 'uint32_t *' (aka 'unsigned int *') increases required alignment from 1 to 4 [-Wcast-align]
+        uint32_t host_crc = *((uint32_t*)(pBuffer + command_packet_len - 4));
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.c(414): warning: passing 'char [32]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+                        HAL_USART_Send_String(DEBUG_UART , "BL_DEBUG_MSG:checksum Success\r\n");
+                                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hal_uart_driver.h(173): note: passing argument to parameter 'string' here
+void HAL_USART_Send_String(USART_TypeDef *USARTx , uint8_t *string);
+                                                            ^
+main.c(424): warning: passing 'char [30]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+          HAL_USART_Send_String(DEBUG_UART , "BL_DEBUG_MSG:checksum Fail!\r\n");
+                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hal_uart_driver.h(173): note: passing argument to parameter 'string' here
+void HAL_USART_Send_String(USART_TypeDef *USARTx , uint8_t *string);
+                                                            ^
+main.c(435): warning: passing 'char [47]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        HAL_USART_Send_String(DEBUG_UART , "BL_DEBUG_MSG:bootloader_handle_mem_write_cmd\r\n");
+                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hal_uart_driver.h(173): note: passing argument to parameter 'string' here
+void HAL_USART_Send_String(USART_TypeDef *USARTx , uint8_t *string);
+                                                            ^
+main.c(439): warning: cast from 'uint8_t *' (aka 'unsigned char *') to 'uint32_t *' (aka 'unsigned int *') increases required alignment from 1 to 4 [-Wcast-align]
+        uint32_t host_crc = *((uint32_t*)(pBuffer + command_packet_len - 4));
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.c(444): warning: passing 'char [32]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+                        HAL_USART_Send_String(DEBUG_UART , "BL_DEBUG_MSG:checksum Success\r\n");
+                                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hal_uart_driver.h(173): note: passing argument to parameter 'string' here
+void HAL_USART_Send_String(USART_TypeDef *USARTx , uint8_t *string);
+                                                            ^
+main.c(449): warning: incompatible pointer types passing 'uint16_t *' (aka 'unsigned short *') to parameter of type 'uint8_t *' (aka 'unsigned char *') [-Wincompatible-pointer-types]
+                                bootloader_uart_write_data(&Status,2);
+                                                           ^~~~~~~
+./main.h(91): note: passing argument to parameter 'pBuffer' here
+void bootloader_uart_write_data(uint8_t *pBuffer , uint32_t len);
+                                         ^
+main.c(454): warning: passing 'char [30]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+          HAL_USART_Send_String(DEBUG_UART , "BL_DEBUG_MSG:checksum Fail!\r\n");
+                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hal_uart_driver.h(173): note: passing argument to parameter 'string' here
+void HAL_USART_Send_String(USART_TypeDef *USARTx , uint8_t *string);
+                                                            ^
+main.c(459): warning: unused parameter 'pBuffer' [-Wunused-parameter]
+void bootloader_handle_otp_cmd(uint8_t *pBuffer)
+                                        ^
+main.c(487): warning: unused parameter 'command_code' [-Wunused-parameter]
+void bootloader_send_ack(uint8_t command_code , uint8_t follow_len)
+                                 ^
+main.c(585): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        FLASH1->CR &=~(0x03 << 8);      
+                   ~~^~~~~~~~~~~~
+main.c(696): warning: while loop has empty body [-Wempty-body]
+                        while(((FLASH1->SR) & FLASH_SR_BSY) != 0);      
+                                                                 ^
+main.c(696): note: put the semicolon on a separate line to silence this warning
+main.c(712): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        FLASH1->OPTCR &=~(sector_num << 16 );
+                                      ~~^~~~~~~~~~~~~~~~~~~~
+main.c(731): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                  FLASH1->OPTCR &=~(0xFF << 16 );
+                                ~~^~~~~~~~~~~~~~
+main.c(732): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        FLASH1->OPTCR |=(sector_num << 16 );
+                                      ~~ ~~~~~~~~~~~^~~~~
+main.c(4): warning: no previous extern declaration for non-static variable 'x' [-Wmissing-variable-declarations]
+volatile int x ;
+             ^
+main.c(4): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile int x ;
+         ^
+main.c(5): warning: no previous extern declaration for non-static variable 'uart' [-Wmissing-variable-declarations]
+USART_config uart;
+             ^
+main.c(5): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+USART_config uart;
+^
+main.c(14): warning: no previous extern declaration for non-static variable 'BL_RX_BUFFER' [-Wmissing-variable-declarations]
+uint8_t BL_RX_BUFFER[BL_RX_LEN];
+        ^
+main.c(14): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t BL_RX_BUFFER[BL_RX_LEN];
+^
+main.c(317): warning: no previous extern declaration for non-static variable 'bin_buffer' [-Wmissing-variable-declarations]
+uint8_t bin_buffer[2712];
+        ^
+main.c(317): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t bin_buffer[2712];
+^
+76 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=4480 RO-data=712 RW-data=20 ZI-data=3968  
+".\Objects\bootloader.axf" - 0 Error(s), 76 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.14.0.pack
+                Keil.STM32F4xx_DFP.2.14.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Target_1
+  C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+
+   * Component: Keil::Device:Startup:2.6.3
+      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
+      Source file:   MDK\Device\Source\ARM\STM32F446xx_OPT.s
+      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f446xx.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
+Build Time Elapsed:  00:00:00
+</pre>
+</body>
+</html>

@@ -1,0 +1,104 @@
+Dependencies for Project 'bootloader', Target 'Target 1': (DO NOT MODIFY !)
+CompilerVersion: 6140000::V6.14::ARMCLANG
+F (.\main.c)(0x5F1B939E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_Target_1-IC:/Users/Mohamed-Sayed/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Mohamed-Sayed/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.14.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F446xx -D_RTE_-o ./objects/main.o -MD)
+I (main.h)(0x5F09CD39)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f446xx.h)(0x5C5BE482)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm4.h)(0x5E8F2582)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5DE051D2)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8F2582)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E835B22)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armclang.h)(0x5E8F2582)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0D174C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0D1778)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\mpu_armv7.h)(0x5E8F2582)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x5C5BE482)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x5DE051CA)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5DE051D2)
+I (hal_uart_driver.h)(0x5F0612B9)
+I (gpio_driver.h)(0x5EF8C6A4)
+I (hal_DMA_driver.h)(0x5EDAABFC)
+I (led.h)(0x5EEE30CF)
+I (hal_crc_driver.h)(0x5F0642C7)
+F (.\gpio_driver.c)(0x5EF6C507)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_Target_1-IC:/Users/Mohamed-Sayed/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Mohamed-Sayed/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.14.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F446xx -D_RTE_-o ./objects/gpio_driver.o -MD)
+I (gpio_driver.h)(0x5EF8C6A4)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f446xx.h)(0x5C5BE482)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm4.h)(0x5E8F2582)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5DE051D2)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8F2582)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E835B22)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armclang.h)(0x5E8F2582)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0D174C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0D1778)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\mpu_armv7.h)(0x5E8F2582)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x5C5BE482)
+F (.\gpio_driver.h)(0x5EF8C6A4)()
+F (.\hal_uart_driver.c)(0x5F0612B9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_Target_1-IC:/Users/Mohamed-Sayed/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Mohamed-Sayed/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.14.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F446xx -D_RTE_-o ./objects/hal_uart_driver.o -MD)
+I (hal_uart_driver.h)(0x5F0612B9)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f446xx.h)(0x5C5BE482)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm4.h)(0x5E8F2582)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5DE051D2)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8F2582)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E835B22)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armclang.h)(0x5E8F2582)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0D174C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0D1778)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\mpu_armv7.h)(0x5E8F2582)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x5C5BE482)
+I (gpio_driver.h)(0x5EF8C6A4)
+I (hal_DMA_driver.h)(0x5EDAABFC)
+F (.\hal_uart_driver.h)(0x5F0612B9)()
+F (.\hal_DMA_driver.h)(0x5EDAABFC)()
+F (.\hal_DMA_driver.c)(0x5EDAABFC)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_Target_1-IC:/Users/Mohamed-Sayed/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Mohamed-Sayed/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.14.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F446xx -D_RTE_-o ./objects/hal_dma_driver.o -MD)
+I (hal_DMA_driver.h)(0x5EDAABFC)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5DE051D2)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f446xx.h)(0x5C5BE482)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm4.h)(0x5E8F2582)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8F2582)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E835B22)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armclang.h)(0x5E8F2582)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0D174C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0D1778)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\mpu_armv7.h)(0x5E8F2582)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x5C5BE482)
+I (gpio_driver.h)(0x5EF8C6A4)
+F (.\led.c)(0x5EEE30CF)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_Target_1-IC:/Users/Mohamed-Sayed/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Mohamed-Sayed/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.14.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F446xx -D_RTE_-o ./objects/led.o -MD)
+I (led.h)(0x5EEE30CF)
+I (gpio_driver.h)(0x5EF8C6A4)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f446xx.h)(0x5C5BE482)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm4.h)(0x5E8F2582)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5DE051D2)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8F2582)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E835B22)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armclang.h)(0x5E8F2582)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0D174C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0D1778)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\mpu_armv7.h)(0x5E8F2582)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x5C5BE482)
+F (.\led.h)(0x5EEE30CF)()
+F (.\hal_crc_driver.c)(0x5F0641FE)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_Target_1-IC:/Users/Mohamed-Sayed/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Mohamed-Sayed/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.14.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F446xx -D_RTE_-o ./objects/hal_crc_driver.o -MD)
+I (hal_crc_driver.h)(0x5F0642C7)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f446xx.h)(0x5C5BE482)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm4.h)(0x5E8F2582)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5DE051D2)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8F2582)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E835B22)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armclang.h)(0x5E8F2582)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0D174C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0D1778)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\mpu_armv7.h)(0x5E8F2582)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x5C5BE482)
+F (.\hal_crc_driver.h)(0x5F0642C7)()
+F (.\main.h)(0x5F09CD39)()
+F (RTE\Device\STM32F446RETx\startup_stm32f446xx.s)(0x5F08977D)(--target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -masm=auto -c-gdwarf-3 -Wa,armasm,--pd,"__MICROLIB SETA 1" -Wa,armasm,--pd,"__EVAL SETA 1"-I./RTE/_Target_1-IC:/Users/Mohamed-Sayed/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Mohamed-Sayed/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.14.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 530" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"STM32F446xx SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o ./objects/startup_stm32f446xx.o)
+F (RTE\Device\STM32F446RETx\system_stm32f4xx.c)(0x5F03FB36)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_Target_1-IC:/Users/Mohamed-Sayed/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Mohamed-Sayed/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.14.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F446xx -D_RTE_-o ./objects/system_stm32f4xx.o -MD)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x5C5BE482)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f446xx.h)(0x5C5BE482)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm4.h)(0x5E8F2582)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5DE051D2)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8F2582)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E835B22)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armclang.h)(0x5E8F2582)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0D174C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0D1778)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\mpu_armv7.h)(0x5E8F2582)
+I (C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x5C5BE482)
